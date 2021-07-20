@@ -13,66 +13,57 @@ int main()
   int tempcount;
   int index = -1;
   int awardChoice;
-  int month;
+  int year=2020;
   char names[6][8]={"curry","george","kobe","lebron","giannis"};
-  char levelNames[5][8]={"GOAT","top_20","supeStar","star","allstar"};
+  char levelNames[5][8]={"GOAT","top20","super","star","allstar"};
   int level[]={0,0,0,0,0,-1};
   int performance[]={100,100,100,100,100,100};
   int endGame=0;
-
-
-
-
-
-
 
   while(endGame==0)
   {
 
 
-
-
     printf("****************************\n");
-    printf("names\tlevel\t  performance\n");
+    printf("names\t level\t performance\n");
     printf("----------------------------\n");
 
-    month = 1;
-    printf("month %d\n", month);
-    month=month+1;
+    printf("year %d\n", year);
+    year++;
 
     for(i=0; i<count ;i++)
     {
-      printf("%s\t",names[i]);
+      printf("%s\t  ",names[i]);
       if(performance[i]>=160)
       {
         // levelNames[i]="supeStar";
-        printf("%s\t", levelNames[0]);
+        printf("%s\t  ", levelNames[0]);
       }
       else if(performance[i]>=140)
       {
         // levelNames[i]="top_20";
-        printf("%s\t", levelNames[1]);
+        printf("%s\t  ", levelNames[1]);
       }
       else if(performance[i]>=120)
       {
         // levelNames[i]="GOAT";
-        printf("%s\t", levelNames[2]);
+        printf("%s\t  ", levelNames[2]);
       }
       else if(performance[i]>=100)
       {
         // levelNames[i]="star";
-        printf("%s\t", levelNames[3]);
+        printf("%s\t  ", levelNames[3]);
       }
       else if(performance[i]>=80)
       {
         // levelNames[i]="allstar";
-        printf("%s\t", levelNames[4]);
+        printf("%s\t  ", levelNames[4]);
       }
       else
       {
         printf("bad\t");
       }
-      printf("%d\n",performance[i] );
+      printf("%-d\n",performance[i] );
 
     }
 
@@ -111,6 +102,7 @@ int main()
         endGame=0;
       }
     }
+
 
   }
 
